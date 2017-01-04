@@ -27,15 +27,18 @@ int pat_1003(){
         
     }
     int *teams = new int[num_road];
-    for (i=0; i<num_road; i++) {
+    for (i=0; i<num_city; i++) {
         cin >> teams[i];
     }
+
     for (i=0; i<num_road; i++) {
-        int c1,c2,len;
-        cin >> c1 >> c2 >> len;
-        road[c1][c2] = len;
+        int a,b,len;
+        cin >> a >> b >> len;
+        
+        road[a][b] = len;
+        road[b][a] = len;
     }
-    
+        
     //预备参数
     int *equalpath = new int[num_city];//相同路径条数
     int *max = new int[num_city];//最大要求的team数量
@@ -90,8 +93,6 @@ int pat_1003(){
                 }
             }
         }
-        
-        
     }
     
     cout << equalpath[destination] << " " << max[destination];
