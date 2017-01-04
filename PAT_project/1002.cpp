@@ -8,103 +8,109 @@
 
 #include "1002.hpp"
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
 struct poly {
     int exp;
     float coe;
-    poly *next;
+    poly * next;
 };
 typedef poly * polypointer;
 
-polypointer  Construct(int length,polypointer n);
-polypointer Attach(int exp,float coe,polypointer d);
-polypointer Add(polypointer A,polypointer B);
+void Construct(int length,polypointer &n);
+int Add(polypointer &A,polypointer &B);
 char Compare(int a, int b);
 
 void pat_1002(){
-    int k,L=0;
-    polypointer A,B,C,D;
+    int k;
+    polypointer A,B,temp;
     cin >> k;
-    A = Construct(k, A);
+    Construct(k, A);
     cin >> k;
-    B = Construct(k, B);
+    Construct(k, B);
     
-    C = Add(A, B);
-    D = C;
-    while (D->next != NULL) {
-        L++;
-        D = D->next;
+    k = Add(A, B);
+    cout << k;
+    temp=A->next;
+    delete A;
+    while (temp != NULL) {
+        cout << " " << temp->exp << " " << fixed << setprecision(1) << temp->coe ; //小数点1位数，iomanip头文件
+        A = temp;
+        temp = temp->next;
+        delete A;
     }
-    cout << L << " ";
-    D = C;
-    while (D->next->next != NULL) {
-        cout << D->exp << " " << D->coe << " ";
-        D = D->next;
-    }//去除末尾的空格
-    cout << D->exp << " " << D->coe << endl;
+    cout << endl;
 }
 
-polypointer Construct(int length,polypointer n){        //输入构造多项式
+void Construct(int length,polypointer &n){        //输入构造多项式
     n = new poly;
     polypointer pre = n;
     while (length > 0) {
         polypointer item = new poly;
-        cin >> pre->exp >> pre->coe ;
+        cin >> item->exp >> item->coe ;
+        item->next = NULL;
         pre->next = item;
         pre = item;
         length--;
     }
-    pre->next = NULL;
-    return n;
-}
-polypointer Attach(int exp,float coe,polypointer d){//将多项式的单独项添加到末尾，返回末尾指针
-    polypointer x = new poly;
-    d->exp = exp;
-    d->coe = coe;
-    d->next = x;
-    return x;
 }
 
-polypointer Add(polypointer A,polypointer B){//多项式和操作
-    polypointer p,q,d,c;
-    float x;
-    p = A;
-    q = B;
-    d = new poly;
-    c = d;
-    while ((p->next != NULL) && (q->next != NULL)) {
+int Add(polypointer &A,polypointer &B){//多项式和操作
+    int length = 0;
+    polypointer p,q,pre,temp;
+    p = A->next;
+    q = B->next;
+    pre = A;
+    delete B;
+    while ((p != NULL) && (q != NULL)) {
         switch (Compare(p->exp, q->exp)) {
             case '=':
-                x = p->coe + q->coe;
-                if (x != 0) {
-                    d = Attach(p->exp, x, d);
+                p->coe += q->coe;
+                temp = q;
+                q = q->next;
+                delete temp;
+                if (p->coe == 0) {
+                    temp = p;
                     p = p->next;
-                    q = q->next;
+                    delete temp;
+                }else{
+                    length++;
+                    pre->next = p;
+                    pre = pre->next;
+                    p = p->next;
                 }
                 break;
             case '>':
-                d = Attach(p->exp, p->coe, d);
+                length++;
+                pre->next = p;
+                pre = pre->next;
                 p = p->next;
                 break;
             case '<':
-                d = Attach(q->exp, q->coe, d);
+                length++;
+                pre->next = q;
+                pre = pre->next;
                 q = q->next;
                 break;
             default:
                 break;
         }
     }
-    while (p->next != NULL) {
-        d = Attach(p->exp, p->coe, d);
+    while (p != NULL) {
+        length++;
+        pre->next = p;
+        pre = pre->next;
         p = p->next;
     }
-    while (q->next != NULL) {
-        d = Attach(q->exp, q->coe, d);
+    while (q != NULL) {
+        length++;
+        pre->next = q;
+        pre = pre->next;
         q = q->next;
     }
-    d = NULL;
-    return c;
+    pre->next = NULL;
+    return length;
 }
 
 char Compare(int a, int b){
