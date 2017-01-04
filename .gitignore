@@ -1,3 +1,7 @@
 *.xcodeproj
 
 *.xcuserstate
+
+*.pbxproj
+
+*.xcuserstate
