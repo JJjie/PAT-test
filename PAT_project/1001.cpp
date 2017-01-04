@@ -6,7 +6,7 @@
 //  Copyright © 2016年 胡文杰. All rights reserved.
 //
 
-#include "1001.hpp"
+#include "pat.h"
 #include <cstdio>
 #include <cstdlib>
 

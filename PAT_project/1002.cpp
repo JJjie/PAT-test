@@ -6,7 +6,7 @@
 //  Copyright © 2016年 胡文杰. All rights reserved.
 //
 
-#include "1002.hpp"
+#include "pat.h"
 #include <iostream>
 #include <iomanip>
 using namespace std;

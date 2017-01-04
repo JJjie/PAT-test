@@ -8,8 +8,7 @@
 
 #include <iostream>
 #include <string>
-#include "1001.hpp"
-#include "1002.hpp"
+#include "pat.h"
 using namespace std;
 
 int main(int argc, const char * argv[]) {
@@ -22,7 +21,7 @@ int main(int argc, const char * argv[]) {
     }else if (tag == 2){
         pat_1002();
     }else if (tag == 3){
-        
+        pat_1003();
     }
     
     return 0;
