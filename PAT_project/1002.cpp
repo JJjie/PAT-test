@@ -32,13 +32,13 @@ void pat_1002(){
     
     C = Add(A, B);
     D = C;
-    while (D != NULL) {
+    while (D->next != NULL) {
         L++;
         D = D->next;
     }
     cout << L << " ";
     D = C;
-    while (D->next != NULL) {
+    while (D->next->next != NULL) {
         cout << D->exp << " " << D->coe << " ";
         D = D->next;
     }//去除末尾的空格
@@ -60,8 +60,8 @@ polypointer Construct(int length,polypointer n){        //输入构造多项式
 }
 polypointer Attach(int exp,float coe,polypointer d){//将多项式的单独项添加到末尾，返回末尾指针
     polypointer x = new poly;
-    x->exp = exp;
-    x->coe = coe;
+    d->exp = exp;
+    d->coe = coe;
     d->next = x;
     return x;
 }
@@ -73,7 +73,7 @@ polypointer Add(polypointer A,polypointer B){//多项式和操作
     q = B;
     d = new poly;
     c = d;
-    while ((p != NULL) && (q != NULL)) {
+    while ((p->next != NULL) && (q->next != NULL)) {
         switch (Compare(p->exp, q->exp)) {
             case '=':
                 x = p->coe + q->coe;
@@ -95,11 +95,11 @@ polypointer Add(polypointer A,polypointer B){//多项式和操作
                 break;
         }
     }
-    while (p != NULL) {
+    while (p->next != NULL) {
         d = Attach(p->exp, p->coe, d);
         p = p->next;
     }
-    while (q != NULL) {
+    while (q->next != NULL) {
         d = Attach(q->exp, q->coe, d);
         q = q->next;
     }
