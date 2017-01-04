@@ -9,7 +9,7 @@
 #include "pat.h"
 #include <iostream>
 using namespace std;
-
+#define INT_MAX 102400
 
 int pat_1003(){
     int num_city, num_road, outset, destination;
@@ -27,7 +27,7 @@ int pat_1003(){
         
     }
     int *teams = new int[num_road];
-    for (i=0; i<num_city; i++) {
+    for (i=0; i<num_city; i++) {//每一个城市的team数量
         cin >> teams[i];
     }
 
@@ -38,15 +38,15 @@ int pat_1003(){
         road[a][b] = len;
         road[b][a] = len;
     }
-        
+    
     //预备参数
     int *equalpath = new int[num_city];//相同路径条数
     int *max = new int[num_city];//最大要求的team数量
     int *shortestpath = new int[num_city];//outset到i_th的最短距离
     bool *visited = new bool[num_city];//标记i_th是否被访问
-    for (i=0; i<num_city; i++) {
+    for (i=0; i < num_city; i++) {
         visited[i] = false;
-        if (i==outset) {
+        if (i == outset) {
             shortestpath[i] = 0;
             equalpath[i] = 1;
             max[i] = teams[i];
@@ -64,7 +64,7 @@ int pat_1003(){
     }
     
     //dijkstra
-    int min,v=0;
+    int min,v = 0;
     for (i=1; i<num_city; i++) {//
         min = INT_MAX;
         for (j=0; j<num_city; j++) {//找一条outset出发的最短路
@@ -80,17 +80,21 @@ int pat_1003(){
         for (j=0; j<num_city; j++) {
             if (!visited[j] && road[v][j] < INT_MAX)
             {
-                shortestpath[j] = min + road[v][j];
-                equalpath[j] = equalpath[v];
-                max[j] += max[v];
-            }
-            else if(min + road[v][j] == shortestpath[j])
-            {
-                equalpath[j] += equalpath[v];
-                if (max[v] + teams[j] > max[j])
+                if (shortestpath[j] > min + road[v][j])
                 {
-                    max[j] = max[v] + teams[j];
+                    shortestpath[j] = min + road[v][j];
+                    equalpath[j] = equalpath[v];
+                    max[j] += max[v];
                 }
+                else if(min + road[v][j] == shortestpath[j])
+                {
+                    equalpath[j] += equalpath[v];
+                    if (max[v] + teams[j] > max[j])
+                    {
+                        max[j] = max[v] + teams[j];
+                    }
+                }
+                
             }
         }
     }
