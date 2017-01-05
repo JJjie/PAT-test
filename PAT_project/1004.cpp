@@ -33,8 +33,8 @@ int pat_1004(){
         }
     }
     
-//    //BFS
-//    BFS(Nodes);
+    //BFS
+    BFS(Nodes);
     
     //DFS
     int *level = new int[N];//标记每层的叶子数
