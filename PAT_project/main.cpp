@@ -25,29 +25,40 @@ int main(int argc, const char * argv[]) {
     }else if (tag == 4){
         pat_1004();
     }
-//    else if (tag == 5){
-//        pat_1005();
-//    }else if (tag == 6){
-//        pat_1006();
-//    }else if (tag == 7){
+    else if (tag == 5){
+        pat_1005();
+    }
+    else if (tag == 6){
+        pat_1006();
+    }
+//    else if (tag == 7){
 //        pat_1007();
-//    }else if (tag == 8){
+//    }
+//    else if (tag == 8){
 //        pat_1008();
-//    }else if (tag == 9){
+//    }
+//    else if (tag == 9){
 //        pat_1009();
-//    }else if (tag == 10){
+//    }
+//    else if (tag == 10){
 //        pat_1010();
-//    }else if (tag == 11){
+//    }
+//    else if (tag == 11){
 //        pat_1011();
-//    }else if (tag == 12){
+//    }
+//    else if (tag == 12){
 //        pat_1012();
-//    }else if (tag == 13){
+//    }
+//    else if (tag == 13){
 //        pat_1013();
-//    }else if (tag == 14){
+//    }
+//    else if (tag == 14){
 //        pat_1014();
-//    }else if (tag == 15){
+//    }
+//    else if (tag == 15){
 //        pat_1015();
-//    }else if (tag == 16){
+//    }
+//    else if (tag == 16){
 //        pat_1016();
 //    }
 
