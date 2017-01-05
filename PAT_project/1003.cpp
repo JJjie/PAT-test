@@ -9,7 +9,6 @@
 #include "pat.h"
 #include <iostream>
 using namespace std;
-#define INT_MAX 102400
 
 int pat_1003(){
     int num_city, num_road, outset, destination;
