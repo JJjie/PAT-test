@@ -11,7 +11,7 @@
 using namespace std;
 
 int pat_1007(){
-    
+    int N, flag, sum=-1, left=0, right=0, temp=0, tempindex=0;
     
     return 0;
 }

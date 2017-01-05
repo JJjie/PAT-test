@@ -22,9 +22,9 @@ int pat_1004(){
     int N, M, ID, K, child;
     int i, j;
     
-    //构建树结构（二维数组）
+    //构建树结构（二维数组，N*M）
     cin >> N >> M;
-    vector<int> *Nodes = new vector<int>[M];
+    vector<int> *Nodes = new vector<int>[N];
     for (i=0; i<M; i++) {
         cin >> ID >> K;
         for (j=0; j<K; j++) {
@@ -33,8 +33,8 @@ int pat_1004(){
         }
     }
     
-    //BFS
-    BFS(Nodes);
+//    //BFS
+//    BFS(Nodes);
     
     //DFS
     int *level = new int[N];//标记每层的叶子数
