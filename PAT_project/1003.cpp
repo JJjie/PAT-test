@@ -1,7 +1,7 @@
 //
 //  1003.cpp
 //  PAT_project
-//
+//  dijkstra算法，图的矩阵存储
 //  Created by 胡文杰 on 2017/1/4.
 //  Copyright © 2017年 胡文杰. All rights reserved.
 //

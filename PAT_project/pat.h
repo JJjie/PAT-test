@@ -12,12 +12,12 @@
 #include <stdio.h>
 
 int pat_1001();
-void pat_1002();
-int pat_1003();
-int pat_1004();
+void pat_1002();//多项式求和（链表操作）
+int pat_1003();//dijkstra算法
+int pat_1004();//DFS,BFS树的遍历
 int pat_1005();
 int pat_1006();
-int pat_1007();
+int pat_1007();//dp动态规划
 int pat_1008();
 int pat_1009();
 int pat_1010();

@@ -1,7 +1,7 @@
 //
 //  1002.cpp
 //  PAT_project
-//
+//  多项式求和（链表操作）
 //  Created by 胡文杰 on 16/8/15.
 //  Copyright © 2016年 胡文杰. All rights reserved.
 //
