@@ -52,7 +52,7 @@ int pat_1004(){
     
     //释放内存
     for (i=0; i<M; i++) {
-        vector<int>(Nodes[i]).swap(Nodes[i]);
+        vector<int>().swap(Nodes[i]);
     }
     delete[] level;
     

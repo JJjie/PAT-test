@@ -38,7 +38,7 @@ int pat_1005(){
     cout << endl;
     
     //释放内存
-    vector<int>(container).swap(container);
+    vector<int>().swap(container);
     
     return 0;
 }
