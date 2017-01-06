@@ -13,7 +13,6 @@ const long long T = (1LL << 63) -1;//表示long long 的最大值
 long long converttoten(string n1, long long radix, long long t);
 long long binarySearch(string n2, long long low, long long high, long long n1);
 int findLargestDigit(string n);
-int cmp(string n2, long long radix, long long t);
 
 int pat_1010(){
     string N1, N2;
@@ -50,20 +49,13 @@ long long converttoten(string n1, long long radix, long long t){
     return ans;
 }
 
-int cmp(string n2, long long radix, long long t) {
-    long long num = converttoten(n2, radix, t);
-    if (num < 0) return 1;
-    if(num < t) return -1;
-    return (t == num) ? 0 : 1;
-}
-
 long long binarySearch(string n2, long long low, long long high, long long n1){
     long long mid;
     while (low <= high){
         mid = (low + high) / 2;
-        int flag = cmp(n2, mid, n1);
-        if(flag == 0) return mid;
-        else if(flag == -1) low = mid + 1;
+        long long num = converttoten(n2, mid, n1);
+        if(num == n1) return mid;
+        else if(num < n1 && num >= 0) low = mid + 1;
         else high = mid - 1;
     }
     return -1;
