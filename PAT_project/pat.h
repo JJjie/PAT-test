@@ -20,7 +20,7 @@ int pat_1006();
 int pat_1007();//dp动态规划
 int pat_1008();
 int pat_1009();//多项式乘积
-int pat_1010();
+int pat_1010();//二分法
 int pat_1011();
 int pat_1012();
 int pat_1013();

@@ -40,9 +40,9 @@ int main(int argc, const char * argv[]) {
     else if (tag == 9){
         pat_1009();
     }
-//    else if (tag == 10){
-//        pat_1010();
-//    }
+    else if (tag == 10){
+        pat_1010();
+    }
 //    else if (tag == 11){
 //        pat_1011();
 //    }
