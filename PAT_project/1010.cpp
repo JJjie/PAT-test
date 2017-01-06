@@ -7,12 +7,12 @@
 #include <string>
 #include <algorithm>
 using namespace std;
-int map[256];//标记字符对应的10进制数值
-const long long T = (1LL << 63) -1;
+long long map[256];//标记字符对应的10进制数值
+const long long T = (1LL << 63) -1;//表示long long 的最大值
 
 long long converttoten(string n1, long long radix, long long t);
 long long binarySearch(string n2, long long low, long long high, long long n1);
-long long findLargestDigit(string n);
+int findLargestDigit(string n);
 int cmp(string n2, long long radix, long long t);
 
 int pat_1010(){
@@ -42,7 +42,7 @@ int pat_1010(){
 
 long long converttoten(string n1, long long radix, long long t){
     long long ans = 0;
-    int len = n1.length();
+    unsigned long len = n1.length();
     for (int i = 0; i < len; i++) {
         ans = ans*radix + map[n1[i]];
         if (ans < 0 || ans > t) return -1;
@@ -69,9 +69,9 @@ long long binarySearch(string n2, long long low, long long high, long long n1){
     return -1;
 }
 
-long long findLargestDigit(string n){
-    long long ans = -1;
-    int len = n.length();
+int findLargestDigit(string n){
+    int ans = -1;
+    unsigned long len = n.length();
     for (int i = 0; i < len ; i++) {
         if (map[n[i]] > ans){
             ans = map[n[i]];
