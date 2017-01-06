@@ -5,13 +5,15 @@
 #include "pat.h"
 #include <iostream>
 #include <string>
+#include <algorithm>
 using namespace std;
 int map[256];//标记字符对应的10进制数值
+const long long T = (1LL << 63) -1;
 
-int converttoten(string n1, int radix, int t);
-int binarySearch(string n2, int low, int high, int n1);
-int findLargestDigit(string n);
-int cmp(string n2, int radix, int t);
+long long converttoten(string n1, long long radix, long long t);
+long long binarySearch(string n2, long long low, long long high, long long n1);
+long long findLargestDigit(string n);
+int cmp(string n2, long long radix, long long t);
 
 int pat_1010(){
     string N1, N2;
@@ -27,10 +29,10 @@ int pat_1010(){
         swap(N1, N2);
     }
 
-    int n1 = converttoten(N1, radix, INT_MAX);//N1代表的十进制数
-    int low = findLargestDigit(N2);//N2最小的可能进制数
-    int high = max(low,n1) + 1;
-    int result = binarySearch(N2, low, high, n1);
+    long long n1 = converttoten(N1, radix,T);//N1代表的十进制数
+    long long low = findLargestDigit(N2);//N2最小的可能进制数
+    long long high = max(low,n1) + 1;
+    long long result = binarySearch(N2, low, high, n1);
 
     if (result == -1) cout << "Impossible" << endl;
     else cout << result << endl;
@@ -38,8 +40,8 @@ int pat_1010(){
     return 0;
 }
 
-int converttoten(string n1, int radix, int t){
-    int ans = 0;
+long long converttoten(string n1, long long radix, long long t){
+    long long ans = 0;
     int len = n1.length();
     for (int i = 0; i < len; i++) {
         ans = ans*radix + map[n1[i]];
@@ -48,16 +50,16 @@ int converttoten(string n1, int radix, int t){
     return ans;
 }
 
-int cmp(string n2, int radix, int t) {
-    int num = converttoten(n2, radix, t);
+int cmp(string n2, long long radix, long long t) {
+    long long num = converttoten(n2, radix, t);
     if (num < 0) return 1;
     if(num < t) return -1;
     return (t == num) ? 0 : 1;
 }
 
-int binarySearch(string n2, int low, int high, int n1){
-    int mid;
-    while (low < high){
+long long binarySearch(string n2, long long low, long long high, long long n1){
+    long long mid;
+    while (low <= high){
         mid = (low + high) / 2;
         int flag = cmp(n2, mid, n1);
         if(flag == 0) return mid;
@@ -67,8 +69,9 @@ int binarySearch(string n2, int low, int high, int n1){
     return -1;
 }
 
-int findLargestDigit(string n){
-    int ans = -1,len = n.length();
+long long findLargestDigit(string n){
+    long long ans = -1;
+    int len = n.length();
     for (int i = 0; i < len ; i++) {
         if (map[n[i]] > ans){
             ans = map[n[i]];
