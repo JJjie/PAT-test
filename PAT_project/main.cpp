@@ -43,15 +43,15 @@ int main(int argc, const char * argv[]) {
     else if (tag == 10){
         pat_1010();
     }
-//    else if (tag == 11){
-//        pat_1011();
-//    }
-//    else if (tag == 12){
-//        pat_1012();
-//    }
-//    else if (tag == 13){
-//        pat_1013();
-//    }
+    else if (tag == 11){
+        pat_1011();
+    }
+    else if (tag == 12){
+        pat_1012();
+    }
+    else if (tag == 13){
+        pat_1013();
+    }
 //    else if (tag == 14){
 //        pat_1014();
 //    }
