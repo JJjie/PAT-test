@@ -22,7 +22,7 @@ int pat_1008();
 int pat_1009();
 int pat_1010();//二分法(数值的长度)
 int pat_1011();
-int pat_1012();
+int pat_1012();//排序
 int pat_1013();
 int pat_1014();
 int pat_1015();
