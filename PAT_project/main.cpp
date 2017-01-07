@@ -52,13 +52,67 @@ int main(int argc, const char * argv[]) {
     else if (tag == 13){
         pat_1013();
     }
-//    else if (tag == 14){
+    else if (tag == 14){
+        pat_1014();
+    }
+    else if (tag == 15){
+        pat_1015();
+    }
+    else if (tag == 16){
+        pat_1016();
+    }
+//    else if (tag == 17){
 //        pat_1014();
 //    }
-//    else if (tag == 15){
+//    else if (tag == 18){
 //        pat_1015();
 //    }
-//    else if (tag == 16){
+//    else if (tag == 19){
+//        pat_1016();
+//    }
+//    else if (tag == 20){
+//        pat_1014();
+//    }
+//    else if (tag == 21){
+//        pat_1015();
+//    }
+//    else if (tag == 22){
+//        pat_1016();
+//    }
+//    else if (tag == 23){
+//        pat_1014();
+//    }
+//    else if (tag == 24){
+//        pat_1015();
+//    }
+//    else if (tag == 25){
+//        pat_1016();
+//    }
+//    else if (tag == 26){
+//        pat_1014();
+//    }
+//    else if (tag == 27){
+//        pat_1015();
+//    }
+//    else if (tag == 28){
+//        pat_1016();
+//    }
+//    else if (tag == 29){
+//        pat_1014();
+//    }
+//    else if (tag == 30){
+//        pat_1015();
+//    }
+//    else if (tag == 31){
+//        pat_1016();
+//    }
+//    else if (tag == 32){
+//        pat_1014();
+//    }
+//    else if (tag == 33){
+//        pat_1015();
+//    }
+//    else if (tag == 34){
 //        pat_1016();
 //    }
 

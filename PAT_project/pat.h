@@ -27,5 +27,26 @@ int pat_1013();//连通性，DFS
 int pat_1014();
 int pat_1015();
 int pat_1016();
+int pat_1017();
+int pat_1018();
+int pat_1019();
+int pat_1020();
+int pat_1021();
+int pat_1022();
+int pat_1023();
+int pat_1024();
+int pat_1025();
+int pat_1026();
+int pat_1027();
+int pat_1028();
+int pat_1029();
+int pat_1030();
+int pat_1031();
+int pat_1032();
+int pat_1033();
+int pat_1034();
+int pat_1035();
+int pat_1036();
+int pat_1037();
 
 #endif /* pat_h */
