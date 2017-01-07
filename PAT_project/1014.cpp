@@ -5,7 +5,7 @@
 #include "pat.h"
 #include <iostream>
 #include <iomanip>
-#include <vector>
+#include <queue>
 using namespace std;
 
 struct customer {
@@ -13,52 +13,70 @@ struct customer {
     int cost;
     int frontcost=0;
 };
-int N, M, K;
-void serveCost(vector<int> *w, customer *c);
+int WIN, M, K;
+void serveCost(customer *c);
 void turnToTime(customer &c);
 
 int pat_1014(){
     int Q;
-    cin >> N >> M >> K >> Q;
-    vector<int> *windows = new  vector<int>[N];
-
+    cin >> WIN >> M >> K >> Q;
     customer *customers = new customer[K];
     for (int i = 0; i < K; i++) {
         cin >> customers[i].cost;
         customers[i].ID = i+1;
     }
 
-    serveCost(windows, customers);
+    serveCost(customers);
     for (int i = 0; i < Q; ++i) {
         int id;
         cin >> id;
         turnToTime(customers[id-1]);
     }
-
 //    释放内存
-    delete[] windows;
     delete[] customers;
 
     return 0;
 }
 
-void serveCost(vector<int> *w, customer *c){
-    for (int i = 0; i < N; i++) { //初始化
-        for (int j = i; (j/2) < M; j=j+2) {
-            w[j].push_back(c[j].cost);
-        }
-    }
-    for (int i = N*M; i < K ; i++) {
-        int index = 0, temp = 0;
-        for (int j = 0; j < N ; j++) {
-            for (int k = 0; k < M; k++) {
-                if (w[j][k] < temp && temp!=0){
-                    temp = w[j][k];
+void serveCost(customer *c){
+    int *p = new int[WIN];//正在处理
+    int *cost = new int[WIN];//窗口预计消费
+    queue<int> *q = new queue<int>[WIN];//N条队伍
+    for (int i = 0; i < K; i++) {
+        if (i < WIN){
+            p[i] = c[i].cost;
+            cost[i] = c[i].cost;
+            c[i].frontcost = cost[i];
+        } else{
+            if (i < WIN*M){
+                for (int j = 1; j <= WIN; j++) {
+                    int index = i - (WIN * j);
+                    if (index < 0 || index > WIN) break;
+                    q[index].push(c[i].cost);
+                    cost[index] += c[i].cost;
+                    c[i].frontcost = cost[index];
+                }
+            } else{
+                if (i < K){
+                    int temp = p[0], t = 0;
+                    for (int j = 1; j < WIN; j++) {
+                        if (p[j] < temp) {
+                            temp = p[j];
+                            t = j;
+                        }
+                    }
+                    p[t] += q[t].front();
+                    cost[t] += c[i].cost;
+                    q[t].pop();
+                    q[t].push(c[i].cost);
+                    c[i].frontcost = cost[t];
                 }
             }
         }
     }
-
+    delete[] p;
+    delete[] cost;
+    delete[] q;
 }
 
 void turnToTime(customer &c){
