@@ -4,25 +4,24 @@
 
 #include "pat.h"
 #include <iostream>
+#include <iomanip>
+#include <vector>
 using namespace std;
 
 struct customer {
     int ID;
     int cost;
-    int window;
-    int frontcost;
+    int frontcost=0;
 };
-int M, K;
-void serveCost(int *w, customer *c);
-string turnToTime(customer &c);
-char* format(int num);
+int N, M, K;
+void serveCost(vector<int> *w, customer *c);
+void turnToTime(customer &c);
 
 int pat_1014(){
-    int N, Q;
-    int *windows = new int[N];
-    for (int i = 0; i < N; i++) {
-        windows[i] = 0;
-    }
+    int Q;
+    cin >> N >> M >> K >> Q;
+    vector<int> *windows = new  vector<int>[N];
+
     customer *customers = new customer[K];
     for (int i = 0; i < K; i++) {
         cin >> customers[i].cost;
@@ -33,8 +32,7 @@ int pat_1014(){
     for (int i = 0; i < Q; ++i) {
         int id;
         cin >> id;
-        string result = turnToTime(customers[id-1]);
-        cout << result << endl;
+        turnToTime(customers[id-1]);
     }
 
 //    释放内存
@@ -44,53 +42,36 @@ int pat_1014(){
     return 0;
 }
 
-void serveCost(int *w, customer *c){
-    for (int i = 0; i < K; i++) {
-        int cost = c[i].cost;
-        int temp = 0;
-        int index = 0;
-        for (int j = 0; j < M; j++) {
-            int tag = w[j] + cost;
-            if (tag < temp || temp == 0){
-                temp = tag;
-                index = j;
+void serveCost(vector<int> *w, customer *c){
+    for (int i = 0; i < N; i++) { //初始化
+        for (int j = i; (j/2) < M; j=j+2) {
+            w[j].push_back(c[j].cost);
+        }
+    }
+    for (int i = N*M; i < K ; i++) {
+        int index = 0, temp = 0;
+        for (int j = 0; j < N ; j++) {
+            for (int k = 0; k < M; k++) {
+                if (w[j][k] < temp && temp!=0){
+                    temp = w[j][k];
+                }
             }
         }
-        c[i].window = index;
-        c[i].frontcost = temp;
-        w[index] += temp;
     }
+
 }
 
-string turnToTime(customer &c){
-    int cost = c.cost + c.frontcost;
+void turnToTime(customer &c){
+    int cost = c.frontcost;
     int hour = 8, minute = 0;
-    string time;
     minute += cost;
     while (minute > 59){
         minute = minute - 60;
         hour ++;
     }
     if (hour >= 17 && minute > 0){
-        return "Sorry";
+        cout << "Sorry" << endl;
     }else{
-        char *h = format(hour);
-        char *m = format(minute);
-        time[0] = h[0];
-        time[1] = h[1];
-        time[2] = ':';
-        time[3] = m[0];
-        time[4] = m[1];
-
-        delete[] h,m;
-        return time;
+        cout << setfill('0') << setw(2) << hour << ':' << setfill('0') << setw(2) << minute << endl;
     }
-}
-
-char* format(int num){
-    char *str = new char[2];
-    int ten = num/10;
-    str[0] = (char)(ten);
-    str[1] = (char)(num-10*ten);
-    return str;
 }
