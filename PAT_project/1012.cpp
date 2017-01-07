@@ -43,16 +43,14 @@ int pat_1012(){
             if (stu[p].crank < temp){
                 temp = stu[p].crank;
                 t = 'C';
-            }else {
-                if (stu[p].mrank < temp){
-                    temp = stu[p].mrank;
-                    t = 'M';
-                }else {
-                    if (stu[p].erank < temp){
-                        temp = stu[p].erank;
-                        t = 'E';
-                    }
-                }
+            }
+            if (stu[p].mrank < temp){
+                temp = stu[p].mrank;
+                t = 'M';
+            }
+            if (stu[p].erank < temp) {
+                temp = stu[p].erank;
+                t = 'E';
             }
             cout << temp << " " << t << endl;
         }else{
