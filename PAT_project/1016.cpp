@@ -85,43 +85,37 @@ int pat_1016(){
     sort(people.begin(),people.end(),less_name);
     for (int i = 0; i < Nname; i++) {
         sort(people[i].records.begin(), people[i].records.end(),less_time);
+//        for (int j = 0; j < people[i].records.size(); j++) {
+//            cout << people[i].name << " " << setfill('0') << setw(2) << people[i].mth << ":" << setfill('0') << setw(2) << people[i].records[j].d << ":" << setfill('0') << setw(2) << people[i].records[j].h << ":" << setfill('0') << setw(2) << people[i].records[j].m << " " << people[i].records[j].condition << endl;
+//        }
     }
 
     itempair tp;
     for (int i = 0; i < Nname; i++) {
-        int start=0,end=0;
-        int size = people[i].records.size();
-        for (int j = 0; j < size && end < size; j++) {
-            int k;
-            for (k = end; k < size; k++) {//找出最早挂电话
-                if (!people[i].records[k].condition) {
-                    end = k;
-                    break;
+        bool judge = false;
+        for (unsigned j = 0; j < people[i].records.size(); j++) {
+            if (people[i].records[j].condition){
+                tp.bd = people[i].records[j].d;
+                tp.bh = people[i].records[j].h;
+                tp.bm = people[i].records[j].m;
+                judge = true;
+            }else{
+                if (judge){
+                    tp.ed = people[i].records[j].d;
+                    tp.eh = people[i].records[j].h;
+                    tp.em = people[i].records[j].m;
+                    //计算消费
+                    int cd = tp.ed - tp.bd;
+                    int ch = tp.eh - tp.bh;
+                    int cm = tp.em - tp.bm;
+                    tp.time = cd*24*60 + ch*60 + cm;
+                    int cost = cd*tollday + tollhour[tp.eh] - tollhour[tp.bh] - tp.bm*toll[tp.bh] + tp.em*toll[tp.eh];
+                    tp.cost = (float)cost/100 ;
+                    people[i].outs.push_back(tp);
+                    people[i].TotalToll += tp.cost;
+                    judge = false;
                 }
             }
-            for (k = start; k < size; k++) {
-                if (people[i].records[k].condition && less_time(people[i].records[k],people[i].records[end])) start = k;
-            }
-            //判断是否有头有尾
-            if (people[i].records[start].condition && !people[i].records[end].condition){
-                tp.bd = people[i].records[start].d;
-                tp.bh = people[i].records[start].h;
-                tp.bm = people[i].records[start].m;
-                tp.ed = people[i].records[end].d;
-                tp.eh = people[i].records[end].h;
-                tp.em = people[i].records[end].m;
-                //计算消费
-                int cd = tp.ed - tp.bd;
-                int ch = tp.eh - tp.bh;
-                int cm = tp.em - tp.bm;
-                tp.time = cd*24*60 + ch*60 + cm;
-                int cost = cd*tollday + tollhour[tp.eh] - tollhour[tp.bh] - tp.bm*toll[tp.bh] + tp.em*toll[tp.eh];
-                tp.cost = ((cost >= 0) ? (float)cost/100 : 0);
-                people[i].outs.push_back(tp);
-                people[i].TotalToll += tp.cost;
-            }
-            start++;
-            end++;
         }
     }
 
