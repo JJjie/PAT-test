@@ -85,23 +85,22 @@ int pat_1016(){
     sort(people.begin(),people.end(),less_name);
     for (int i = 0; i < Nname; i++) {
         sort(people[i].records.begin(), people[i].records.end(),less_time);
-        for (int j = 0; j < people[i].records.size(); j++) {
-            cout << people[i].name << " " << setfill('0') << setw(2) << people[i].mth << ":" << setfill('0') << setw(2) << people[i].records[j].d << ":" << setfill('0') << setw(2) << people[i].records[j].h << ":" << setfill('0') << setw(2) << people[i].records[j].m << " " << people[i].records[j].condition << endl;
-        }
     }
 
     itempair tp;
     for (int i = 0; i < Nname; i++) {
-        int start=-1,end=-1;
-        for (int j = 0; j < people[i].records.size(); j++) {
-            for (int k = end+1; k < people[i].records.size(); k++) {//找出最早挂电话
+        int start=0,end=0;
+        int size = people[i].records.size();
+        for (int j = 0; j < size && end < size; j++) {
+            int k;
+            for (k = end; k < size; k++) {//找出最早挂电话
                 if (!people[i].records[k].condition) {
-                    end = j;
+                    end = k;
                     break;
                 }
             }
-            for (int k = start+1; k < people[i].records.size(); k++) {
-                if (people[i].records[k].condition && less_time(people[i].records[k],people[i].records[end])) start = j;
+            for (k = start; k < size; k++) {
+                if (people[i].records[k].condition && less_time(people[i].records[k],people[i].records[end])) start = k;
             }
             //判断是否有头有尾
             if (people[i].records[start].condition && !people[i].records[end].condition){
@@ -121,6 +120,8 @@ int pat_1016(){
                 people[i].outs.push_back(tp);
                 people[i].TotalToll += tp.cost;
             }
+            start++;
+            end++;
         }
     }
 
