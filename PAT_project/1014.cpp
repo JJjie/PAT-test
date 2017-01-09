@@ -16,6 +16,8 @@ struct customer {
 int WIN, M, K;
 void serveCost(customer *c);
 void turnToTime(customer &c);
+int getHour(int d);
+int getMinute(int d);
 
 int pat_1014(){
     int Q;
@@ -46,16 +48,15 @@ void serveCost(customer *c){
         if (i < WIN){
             p[i] = c[i].cost;
             cost[i] = c[i].cost;
-            c[i].frontcost = cost[i];
         } else{
             if (i < WIN*M){
-                for (int j = 1; j <= WIN; j++) {
-                    int index = i - (WIN * j);
-                    if (index < 0 || index > WIN) break;
-                    q[index].push(c[i].cost);
-                    cost[index] += c[i].cost;
-                    c[i].frontcost = cost[index];
+                int index = i - WIN;
+                while (index/WIN != 0){
+                    index -= WIN;
                 }
+                q[index].push(c[i].cost);
+                c[i].frontcost = cost[index];
+                cost[index] += c[i].cost;
             } else{
                 if (i < K){
                     int temp = p[0], t = 0;
@@ -66,10 +67,10 @@ void serveCost(customer *c){
                         }
                     }
                     p[t] += q[t].front();
+                    c[i].frontcost = cost[t];
                     cost[t] += c[i].cost;
                     q[t].pop();
                     q[t].push(c[i].cost);
-                    c[i].frontcost = cost[t];
                 }
             }
         }
@@ -80,16 +81,30 @@ void serveCost(customer *c){
 }
 
 void turnToTime(customer &c){
-    int cost = c.frontcost;
-    int hour = 8, minute = 0;
-    minute += cost;
-    while (minute > 59){
-        minute = minute - 60;
-        hour ++;
-    }
-    if (hour >= 17 && minute > 0){
+    int minute = c.frontcost;
+    int startHour = getHour(minute);
+    if (startHour > 16){
         cout << "Sorry" << endl;
     }else{
-        cout << setfill('0') << setw(2) << hour << ':' << setfill('0') << setw(2) << minute << endl;
+        minute += c.cost;
+        int ehour = getHour(minute);
+        int eminute = getMinute(minute);
+        cout << setfill('0') << setw(2) << ehour << ':' << setfill('0') << setw(2) << eminute << endl;
     }
+}
+
+int getHour(int d){
+    int hour = 8;
+    while (d > 59){
+        hour ++;
+        d = d - 60;
+    }
+    return hour;
+}
+int getMinute(int d){
+    int minute = d;
+    while (minute > 59){
+        minute = minute - 60;
+    }
+    return minute;
 }
