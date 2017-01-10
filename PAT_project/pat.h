@@ -26,7 +26,7 @@ int pat_1012();//排序
 int pat_1013();//连通性，DFS
 int pat_1014();
 int pat_1015();//数字可逆的素数
-int pat_1016();
+int pat_1016();//字符处理
 int pat_1017();
 int pat_1018();
 int pat_1019();
