@@ -64,12 +64,12 @@ int main(int argc, const char * argv[]) {
     else if (tag == 17){
         pat_1017();
     }
-//    else if (tag == 18){
-//        pat_1018();
-//    }
-//    else if (tag == 19){
-//        pat_1019();
-//    }
+    else if (tag == 18){
+        pat_1018();
+    }
+    else if (tag == 19){
+        pat_1019();
+    }
 //    else if (tag == 20){
 //        pat_1020();
 //    }
