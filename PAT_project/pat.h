@@ -28,7 +28,7 @@ int pat_1014();
 int pat_1015();//数字可逆的素数
 int pat_1016();//string字符串，时间（变为dd:hh:mm:ss存/1017题全部化为秒存）
 int pat_1017();
-int pat_1018();
+int pat_1018();//dijkstra + dfs
 int pat_1019();
 int pat_1020();
 int pat_1021();
