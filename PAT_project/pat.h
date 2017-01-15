@@ -30,7 +30,7 @@ int pat_1016();//string字符串，时间（变为dd:hh:mm:ss存/1017题全部�
 int pat_1017();
 int pat_1018();//dijkstra + dfs
 int pat_1019();
-int pat_1020();
+int pat_1020();//后序中序得二叉树,层序输出
 int pat_1021();
 int pat_1022();
 int pat_1023();

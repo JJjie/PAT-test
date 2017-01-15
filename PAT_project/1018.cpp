@@ -71,7 +71,7 @@ int pat_1018(){
     for (int i = path.size() - 2; i >= 0 ; i--) {
         cout << "->" << path[i] ;
     }
-    cout << " " <<minBack << endl;
+    cout << " " << minBack << endl;
 
 //    释放内存
     for (int i = 0; i < N; i++) {
