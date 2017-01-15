@@ -33,7 +33,7 @@ int pat_1019();//同尾数
 int pat_1020();//后序中序得二叉树,层序输出 *
 int pat_1021();//图的连通分量（dfs，bfs）
 int pat_1022();//map与set，STL的应用（I/O流问题） *
-int pat_1023();
+int pat_1023();//有趣的大整数运算
 int pat_1024();
 int pat_1025();
 int pat_1026();
