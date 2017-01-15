@@ -73,9 +73,9 @@ int main(int argc, const char * argv[]) {
     else if (tag == 20){
         pat_1020();
     }
-//    else if (tag == 21){
-//        pat_1021();
-//    }
+    else if (tag == 21){
+        pat_1021();
+    }
 //    else if (tag == 22){
 //        pat_1022();
 //    }
