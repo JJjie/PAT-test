@@ -40,7 +40,7 @@ int pat_1026();//时间排队（逻辑题）
 int pat_1027();//进制转换
 int pat_1028();//排序，STL的应用
 int pat_1029();//求两个有序数列的中位数 *
-int pat_1030();
+int pat_1030();//路径带权的dijkstra + dfs *
 int pat_1031();
 int pat_1032();
 int pat_1033();
