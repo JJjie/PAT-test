@@ -36,8 +36,8 @@ int pat_1022();//map与set，STL的应用（I/O流问题） *
 int pat_1023();//有趣的大整数运算
 int pat_1024();//求回文数（大整数防止溢出用string）
 int pat_1025();//成绩排序（注意题中限定的数据输出长度）
-int pat_1026();
-int pat_1027();
+int pat_1026();//时间排队（逻辑题）
+int pat_1027();//进制转换
 int pat_1028();
 int pat_1029();
 int pat_1030();

@@ -91,9 +91,9 @@ int main(int argc, const char * argv[]) {
     else if (tag == 26){
         pat_1026();
     }
-//    else if (tag == 27){
-//        pat_1027();
-//    }
+    else if (tag == 27){
+        pat_1027();
+    }
 //    else if (tag == 28){
 //        pat_1028();
 //    }
