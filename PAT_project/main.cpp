@@ -7,7 +7,6 @@
 //
 
 #include <iostream>
-#include <string>
 #include "pat.h"
 using namespace std;
 
@@ -18,11 +17,14 @@ int main(int argc, const char * argv[]) {
     cin.ignore(); //忽略回车符
     if (tag == 1) {
         pat_1001();
-    }else if (tag == 2){
+    }
+    else if (tag == 2){
         pat_1002();
-    }else if (tag == 3){
+    }
+    else if (tag == 3){
         pat_1003();
-    }else if (tag == 4){
+    }
+    else if (tag == 4){
         pat_1004();
     }
     else if (tag == 5){
@@ -103,9 +105,9 @@ int main(int argc, const char * argv[]) {
     else if (tag == 30){
         pat_1030();
     }
-//    else if (tag == 31){
-//        pat_1031();
-//    }
+    else if (tag == 31){
+        pat_1031();
+    }
 //    else if (tag == 32){
 //        pat_1032();
 //    }
