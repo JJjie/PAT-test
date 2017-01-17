@@ -114,9 +114,56 @@ int main(int argc, const char * argv[]) {
     else if (tag == 33){
         pat_1033();
     }
-//    else if (tag == 34){
-//        pat_1034();
+    else if (tag == 34){
+        pat_1034();
+    }
+    //    else if (tag == 35){
+//        pat_1035();
 //    }
-
+    //    else if (tag == 36){
+//        pat_1036();
+//    }
+//    else if (tag == 37){
+//        pat_1037();
+//    }
+    //    else if (tag == 38){
+//        pat_1038();
+//    }
+    //    else if (tag == 39){
+//        pat_1039();
+//    }
+    //    else if (tag == 40){
+//        pat_1040();
+//    }
+    //    else if (tag == 41){
+//        pat_1041();
+//    }
+    //    else if (tag == 42){
+//        pat_1042();
+//    }
+    //    else if (tag == 43){
+//        pat_1043();
+//    }
+    //    else if (tag == 44){
+//        pat_1044();
+//    }
+    //    else if (tag == 45){
+//        pat_1045();
+//    }
+    //    else if (tag == 46){
+//        pat_1046();
+//    }
+    //    else if (tag == 47){
+//        pat_1047();
+//    }
+    //    else if (tag == 48){
+//        pat_1048();
+//    }
+    //    else if (tag == 49){
+//        pat_1049();
+//    }
+    //    else if (tag == 50){
+//        pat_1050();
+//    }
     return 0;
 }
