@@ -43,7 +43,7 @@ int pat_1029();//求两个有序数列的中位数 *
 int pat_1030();//路径带权的dijkstra + dfs *
 int pat_1031();//画图
 int pat_1032();//链表 求公共尾部
-int pat_1033();
+int pat_1033();//贪心算法 * （注意：c++的输入比c的输入耗时要长）
 int pat_1034();
 int pat_1035();
 int pat_1036();
