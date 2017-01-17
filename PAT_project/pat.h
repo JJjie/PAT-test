@@ -41,8 +41,8 @@ int pat_1027();//进制转换
 int pat_1028();//排序，STL的应用
 int pat_1029();//求两个有序数列的中位数 *
 int pat_1030();//路径带权的dijkstra + dfs *
-int pat_1031();
-int pat_1032();
+int pat_1031();//画图
+int pat_1032();//链表 求公共尾部
 int pat_1033();
 int pat_1034();
 int pat_1035();
