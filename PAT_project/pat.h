@@ -44,11 +44,11 @@ int pat_1030();//路径带权的dijkstra + dfs *
 int pat_1031();//画图
 int pat_1032();//链表 求公共尾部
 int pat_1033();//贪心算法 （注意：c++的输入比c的输入耗时要长） *
-int pat_1034();//dfs 找连通分量
+int pat_1034();//dfs 找连通分量 *
 int pat_1035();//字符串处理
 int pat_1036();//简单排序
-int pat_1037();
-int pat_1038();
+int pat_1037();//贪心算法
+int pat_1038();//贪心算法（string以及sort()中cmp的妙用） *
 int pat_1039();
 int pat_1040();
 int pat_1041();
