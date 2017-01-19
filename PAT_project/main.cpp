@@ -120,9 +120,9 @@ int main(int argc, const char * argv[]) {
     else if (tag == 35){
         pat_1035();
     }
-    //    else if (tag == 36){
-//        pat_1036();
-//    }
+    else if (tag == 36){
+        pat_1036();
+    }
 //    else if (tag == 37){
 //        pat_1037();
 //    }

@@ -48,5 +48,9 @@ int pat_1034();//dfs 找连通分量
 int pat_1035();//字符串处理
 int pat_1036();
 int pat_1037();
+int pat_1038();
+int pat_1039();
+int pat_1040();
+int pat_1041();
 
 #endif /* pat_h */
