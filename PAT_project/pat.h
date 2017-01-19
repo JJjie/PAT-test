@@ -49,7 +49,7 @@ int pat_1035();//字符串处理
 int pat_1036();//简单排序
 int pat_1037();//贪心算法
 int pat_1038();//贪心算法（string以及sort()中cmp的妙用） *
-int pat_1039();
+int pat_1039();//查找
 int pat_1040();
 int pat_1041();
 
