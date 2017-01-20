@@ -55,7 +55,7 @@ int pat_1041();//hash 散列
 int pat_1042();//模拟洗牌
 int pat_1043();//判断是否是二叉搜索树BST *
 int pat_1044();//二分查找 *
-int pat_1045();
+int pat_1045();//动态规划，LIS / LCS 最长公共子序列  **
 int pat_1046();
 int pat_1047();
 int pat_1048();
