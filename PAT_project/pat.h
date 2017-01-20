@@ -53,9 +53,23 @@ int pat_1039();//查找
 int pat_1040();//动态规划（最长对称字符串） *
 int pat_1041();//hash 散列
 int pat_1042();//模拟洗牌
-int pat_1043();
-int pat_1044();
+int pat_1043();//判断是否是二叉搜索树BST *
+int pat_1044();//二分查找 *
 int pat_1045();
 int pat_1046();
+int pat_1047();
+int pat_1048();
+int pat_1049();
+int pat_1050();
+int pat_1051();
+int pat_1052();
+int pat_1053();
+int pat_1054();
+int pat_1055();
+int pat_1056();
+int pat_1057();
+int pat_1058();
+int pat_1059();
+int pat_1060();
 
 #endif /* pat_h */

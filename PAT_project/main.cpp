@@ -141,15 +141,15 @@ int main(int argc, const char * argv[]) {
     else if (tag == 42){
         pat_1042();
     }
-    //    else if (tag == 43){
-//        pat_1043();
-//    }
-    //    else if (tag == 44){
-//        pat_1044();
-//    }
-    //    else if (tag == 45){
-//        pat_1045();
-//    }
+    else if (tag == 43){
+        pat_1043();
+    }
+    else if (tag == 44){
+        pat_1044();
+    }
+    else if (tag == 45){
+        pat_1045();
+    }
     //    else if (tag == 46){
 //        pat_1046();
 //    }
