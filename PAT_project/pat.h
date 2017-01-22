@@ -58,7 +58,7 @@ int pat_1044();//二分查找 *
 int pat_1045();//动态规划，LIS / LCS 最长公共子序列  **
 int pat_1046();//模拟最短距离 （环形路径）
 int pat_1047();//STL vector的应用
-int pat_1048();
+int pat_1048();//hash散列
 int pat_1049();
 int pat_1050();
 int pat_1051();
