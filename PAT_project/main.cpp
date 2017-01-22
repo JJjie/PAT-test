@@ -159,11 +159,101 @@ int main(int argc, const char * argv[]) {
     else if (tag == 48){
         pat_1048();
     }
-    //    else if (tag == 49){
-//        pat_1049();
-//    }
-    //    else if (tag == 50){
+    else if (tag == 49){
+        pat_1049();
+    }
+//    else if (tag == 50){
 //        pat_1050();
+//    }
+//    else if (tag == 51){
+//        pat_1051();
+//    }
+//    else if (tag == 52){
+//        pat_1052();
+//    }
+//    else if (tag == 53){
+//        pat_1053();
+//    }
+//    else if (tag == 54){
+//        pat_1054();
+//    }
+//    else if (tag == 55){
+//        pat_1055();
+//    }
+//    else if (tag == 56){
+//        pat_1056();
+//    }
+//    else if (tag == 57){
+//        pat_1057();
+//    }
+//    else if (tag == 58){
+//        pat_1058();
+//    }
+//    else if (tag == 59){
+//        pat_1059();
+//    }
+//    else if (tag == 60){
+//        pat_1060();
+//    }
+//    else if (tag == 61){
+//        pat_1061();
+//    }
+//    else if (tag == 62){
+//        pat_1062();
+//    }
+//    else if (tag == 63){
+//        pat_1063();
+//    }
+//    else if (tag == 64){
+//        pat_1064();
+//    }
+//    else if (tag == 65){
+//        pat_1065();
+//    }
+//    else if (tag == 66){
+//        pat_1066();
+//    }
+//    else if (tag == 67){
+//        pat_1067();
+//    }
+//    else if (tag == 68){
+//        pat_1068();
+//    }
+//    else if (tag == 69){
+//        pat_1069();
+//    }
+//    else if (tag == 70){
+//        pat_1070();
+//    }
+//    else if (tag == 71){
+//        pat_1071();
+//    }
+//    else if (tag == 72){
+//        pat_1072();
+//    }
+//    else if (tag == 73){
+//        pat_1073();
+//    }
+//    else if (tag == 74){
+//        pat_1074();
+//    }
+//    else if (tag == 75){
+//        pat_1075();
+//    }
+//    else if (tag == 76){
+//        pat_1076();
+//    }
+//    else if (tag == 77){
+//        pat_1077();
+//    }
+//    else if (tag == 78){
+//        pat_1078();
+//    }
+//    else if (tag == 79){
+//        pat_1079();
+//    }
+//    else if (tag == 80){
+//        pat_1080();
 //    }
     return 0;
 }
