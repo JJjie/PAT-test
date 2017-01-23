@@ -61,7 +61,7 @@ int pat_1047();//STL vector的应用
 int pat_1048();//hash散列
 int pat_1049();//数学问题：计算序列中"1"的数目
 int pat_1050();//hash散列 字符串处理
-int pat_1051();
+int pat_1051();//栈的模拟 *
 int pat_1052();
 int pat_1053();
 int pat_1054();
