@@ -66,7 +66,7 @@ int pat_1052();//模拟链表，求任意输出序列
 int pat_1053();//树的遍历，求目标带权路径
 int pat_1054();//寻主要色素
 int pat_1055();//排序问题：世界富豪榜
-int pat_1056();
+int pat_1056();//STL queue的使用
 int pat_1057();
 int pat_1058();
 int pat_1059();
