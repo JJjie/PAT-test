@@ -75,7 +75,7 @@ int pat_1061();//字符串处理，福尔摩斯密码解密
 int pat_1062();//排序
 int pat_1063();//STL set的应用 *
 int pat_1064();//完全二叉搜索树 中序转层序 *
-int pat_1065();
+int pat_1065();//大整数加减比较
 int pat_1066();
 int pat_1067();
 int pat_1068();
