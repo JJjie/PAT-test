@@ -68,7 +68,7 @@ int pat_1054();//寻主要色素
 int pat_1055();//排序问题：世界富豪榜
 int pat_1056();//STL queue的使用
 int pat_1057();//树状数组，加快查询速度 **
-int pat_1058();
+int pat_1058();//霍格沃茨加法规则
 int pat_1059();
 int pat_1060();
 int pat_1061();
