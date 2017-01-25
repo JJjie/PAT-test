@@ -70,8 +70,8 @@ int pat_1056();//STL queue的使用
 int pat_1057();//树状数组，加快查询速度 **
 int pat_1058();//霍格沃茨加法规则
 int pat_1059();//素数分解 *
-int pat_1060();
-int pat_1061();
+int pat_1060();//科学计数法
+int pat_1061();//字符串处理，福尔摩斯密码解密
 int pat_1062();
 int pat_1063();
 int pat_1064();
