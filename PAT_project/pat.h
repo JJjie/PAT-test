@@ -73,7 +73,7 @@ int pat_1059();//素数分解 *
 int pat_1060();//科学计数法
 int pat_1061();//字符串处理，福尔摩斯密码解密
 int pat_1062();//排序
-int pat_1063();
+int pat_1063();//STL set的应用 *
 int pat_1064();
 int pat_1065();
 int pat_1066();
