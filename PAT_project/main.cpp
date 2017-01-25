@@ -189,9 +189,9 @@ int main(int argc, const char * argv[]) {
     else if (tag == 58){
         pat_1058();
     }
-//    else if (tag == 59){
-//        pat_1059();
-//    }
+    else if (tag == 59){
+        pat_1059();
+    }
 //    else if (tag == 60){
 //        pat_1060();
 //    }
