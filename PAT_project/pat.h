@@ -77,8 +77,8 @@ int pat_1063();//STL set的应用 *
 int pat_1064();//完全二叉搜索树 中序转层序 *
 int pat_1065();//大整数加减比较
 int pat_1066();//平衡二叉树的构造 *
-int pat_1067();
-int pat_1068();
+int pat_1067();//交换排序 *
+int pat_1068();//01背包 dp动态规划 **
 int pat_1069();
 int pat_1070();
 int pat_1071();

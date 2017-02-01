@@ -213,12 +213,12 @@ int main(int argc, const char * argv[]) {
     else if (tag == 66){
         pat_1066();
     }
-//    else if (tag == 67){
-//        pat_1067();
-//    }
-//    else if (tag == 68){
-//        pat_1068();
-//    }
+    else if (tag == 67){
+        pat_1067();
+    }
+    else if (tag == 68){
+        pat_1068();
+    }
 //    else if (tag == 69){
 //        pat_1069();
 //    }
