@@ -83,7 +83,7 @@ int pat_1069();//数学问题，四位数字重排相减最后得6174
 int pat_1070();//贪心算法，求最大的月饼收益分配方案
 int pat_1071();//STL map的应用，cctype isalnum判断字符 *
 int pat_1072();//dijkstra
-int pat_1073();
+int pat_1073();//字符串处理
 int pat_1074();
 int pat_1075();
 int pat_1076();
