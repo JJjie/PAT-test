@@ -249,9 +249,9 @@ int main(int argc, const char * argv[]) {
     else if (tag == 78){
         pat_1078();
     }
-//    else if (tag == 79){
-//        pat_1079();
-//    }
+    else if (tag == 79){
+        pat_1079();
+    }
 //    else if (tag == 80){
 //        pat_1080();
 //    }
