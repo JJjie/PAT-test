@@ -86,7 +86,7 @@ int pat_1072();//dijkstra
 int pat_1073();//字符串处理
 int pat_1074();//模拟链表
 int pat_1075();//排序问题
-int pat_1076();
+int pat_1076();//bfs 层序遍历
 int pat_1077();
 int pat_1078();
 int pat_1079();
