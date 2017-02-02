@@ -246,14 +246,143 @@ int main(int argc, const char * argv[]) {
     else if (tag == 77){
         pat_1077();
     }
-//    else if (tag == 78){
-//        pat_1078();
-//    }
+    else if (tag == 78){
+        pat_1078();
+    }
 //    else if (tag == 79){
 //        pat_1079();
 //    }
 //    else if (tag == 80){
 //        pat_1080();
+//    }
+//    else if (tag == 81){
+//        pat_1081();
+//    }
+//    else if (tag == 82){
+//        pat_1082();
+//    }
+//    else if (tag == 83){
+//        pat_1083();
+//    }
+//    else if (tag == 84){
+//        pat_1084();
+//    }
+//    else if (tag == 85){
+//        pat_1085();
+//    }
+//    else if (tag == 86){
+//        pat_1086();
+//    }
+//    else if (tag == 87){
+//        pat_1087();
+//    }
+//    else if (tag == 88){
+//        pat_1088();
+//    }
+//    else if (tag == 89){
+//        pat_1089();
+//    }
+//    else if (tag == 90){
+//        pat_1090();
+//    }
+//    else if (tag == 91){
+//        pat_1091();
+//    }
+//    else if (tag == 92){
+//        pat_1092();
+//    }
+//    else if (tag == 93){
+//        pat_1093();
+//    }
+//    else if (tag == 94){
+//        pat_1094();
+//    }
+//    else if (tag == 95){
+//        pat_1095();
+//    }
+//    else if (tag == 96){
+//        pat_1096();
+//    }
+//    else if (tag == 97){
+//        pat_1097();
+//    }
+//    else if (tag == 98){
+//        pat_1098();
+//    }
+//    else if (tag == 99){
+//        pat_1099();
+//    }
+//    else if (tag == 100){
+//        pat_1100();
+//    }
+//    else if (tag == 101){
+//        pat_1101();
+//    }
+//    else if (tag == 102){
+//        pat_1102();
+//    }
+//    else if (tag == 103){
+//        pat_1103();
+//    }
+//    else if (tag == 104){
+//        pat_1104();
+//    }
+//    else if (tag == 105){
+//        pat_1105();
+//    }
+//    else if (tag == 106){
+//        pat_1106();
+//    }
+//    else if (tag == 107){
+//        pat_1107();
+//    }
+//    else if (tag == 108){
+//        pat_1108();
+//    }
+//    else if (tag == 109){
+//        pat_1109();
+//    }
+//    else if (tag == 110){
+//        pat_1110();
+//    }
+//    else if (tag == 111){
+//        pat_1111();
+//    }
+//    else if (tag == 112){
+//        pat_1112();
+//    }
+//    else if (tag == 113){
+//        pat_1113();
+//    }
+//    else if (tag == 114){
+//        pat_1114();
+//    }
+//    else if (tag == 115){
+//        pat_1115();
+//    }
+//    else if (tag == 116){
+//        pat_1116();
+//    }
+//    else if (tag == 117){
+//        pat_1117();
+//    }
+//    else if (tag == 118){
+//        pat_1118();
+//    }
+//    else if (tag == 119){
+//        pat_1119();
+//    }
+//    else if (tag == 120){
+//        pat_1120();
+//    }
+//    else if (tag == 121){
+//        pat_1121();
+//    }
+//    else if (tag == 122){
+//        pat_1122();
+//    }
+//    else if (tag == 123){
+//        pat_1123();
 //    }
     return 0;
 }

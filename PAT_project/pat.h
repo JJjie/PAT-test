@@ -88,7 +88,7 @@ int pat_1074();//模拟链表
 int pat_1075();//排序问题
 int pat_1076();//bfs 层序遍历
 int pat_1077();//字符串处理
-int pat_1078();
+int pat_1078();//哈希表 二次探测法 *
 int pat_1079();
 int pat_1080();
 int pat_1081();
