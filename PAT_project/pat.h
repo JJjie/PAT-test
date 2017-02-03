@@ -93,7 +93,7 @@ int pat_1079();//dfs遍历
 int pat_1080();//排序：成绩排名录取
 int pat_1081();//分数的四则运算 *
 int pat_1082();//字符串处理
-int pat_1083();
+int pat_1083();//排序
 int pat_1084();
 int pat_1085();
 int pat_1086();
