@@ -90,7 +90,7 @@ int pat_1076();//bfs 层序遍历
 int pat_1077();//字符串处理
 int pat_1078();//哈希表 二次探测法 *
 int pat_1079();//dfs遍历
-int pat_1080();
+int pat_1080();//排序：成绩排名录取
 int pat_1081();
 int pat_1082();
 int pat_1083();
