@@ -8,7 +8,7 @@
 #include <algorithm>
 using namespace std;
 long long map[256];//标记字符对应的10进制数值
-const long long T = (1LL << 63) -1;//表示long long 的最大值
+const long long T = 0x7fffffffffffffff;//表示long long 的最大值
 
 long long converttoten(string n1, long long radix, long long t);
 long long binarySearch(string n2, long long low, long long high, long long n1);

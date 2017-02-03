@@ -6,7 +6,7 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-#define INT_MAX 0x7fffffff
+#define INToMAX 0x7fffffff
 
 vector<vector<int>> road_30;
 vector<vector<int>> prices_30;
@@ -31,11 +31,11 @@ int pat_1030(){
     prices_30.resize(N);
     visited_30.resize(N, false);
     previsited_30.resize(N, S);
-    shortest_30.resize(N, INT_MAX);
-    cost_30.resize(N,INT_MAX);
+    shortest_30.resize(N, INToMAX);
+    cost_30.resize(N,INToMAX);
     for (int i = 0; i < N; i++) {
-        road_30[i].resize(N,INT_MAX);
-        prices_30[i].resize(N,INT_MAX);
+        road_30[i].resize(N,INToMAX);
+        prices_30[i].resize(N,INToMAX);
     }
 
     for (int i = 0; i < M; i++) {
@@ -57,7 +57,7 @@ int pat_1030(){
 
     int index=0, min;
     for (int i = 1; i < N; i++) {
-        min = INT_MAX;
+        min = INToMAX;
         for (int j = 0; j < N; ++j) {
             if (!visited_30[j] && shortest_30[j] < min){
                 min = shortest_30[j];
@@ -68,7 +68,7 @@ int pat_1030(){
             break;
         visited_30[index] = true;
         for (int j = 0; j < N; j++) {
-            if (!visited_30[j] && road_30[index][j] != INT_MAX){
+            if (!visited_30[j] && road_30[index][j] != INToMAX){
                 if (min + road_30[index][j] < shortest_30[j]){
                     shortest_30[j] = min + road_30[index][j];
                     cost_30[j] = cost_30[index] + prices_30[index][j];
