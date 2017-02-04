@@ -97,8 +97,8 @@ int pat_1083();//排序
 int pat_1084();//字符串处理
 int pat_1085();//二分法加快搜索速度
 int pat_1086();//树的遍历 *
-int pat_1087();
-int pat_1088();
+int pat_1087();//dijkstra，dfs && STL之map的应用
+int pat_1088();//分数的四则运算
 int pat_1089();
 int pat_1090();
 int pat_1091();
