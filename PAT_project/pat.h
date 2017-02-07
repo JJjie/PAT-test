@@ -103,7 +103,7 @@ int pat_1089();//插入排序与归并排序 *
 int pat_1090();//DFS遍历
 int pat_1091();//BFS广度遍历 三维数组 *
 int pat_1092();//hash散列
-int pat_1093();
+int pat_1093();//逻辑题 *
 int pat_1094();
 int pat_1095();
 int pat_1096();
