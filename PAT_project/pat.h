@@ -106,7 +106,7 @@ int pat_1092();//hash散列
 int pat_1093();//逻辑题 *
 int pat_1094();//DFS
 int pat_1095();//map应用，排序
-int pat_1096();
+int pat_1096();//逻辑题，求一个整数可拆解成的连续的乘积
 int pat_1097();
 int pat_1098();
 int pat_1099();
