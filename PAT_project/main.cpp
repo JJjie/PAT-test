@@ -303,9 +303,9 @@ int main(int argc, const char * argv[]) {
     else if (tag == 96){
         pat_1096();
     }
-//    else if (tag == 97){
-//        pat_1097();
-//    }
+    else if (tag == 97){
+        pat_1097();
+    }
 //    else if (tag == 98){
 //        pat_1098();
 //    }
