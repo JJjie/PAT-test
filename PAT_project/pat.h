@@ -105,7 +105,7 @@ int pat_1091();//BFS广度遍历 三维数组 *
 int pat_1092();//hash散列
 int pat_1093();//逻辑题 *
 int pat_1094();//DFS
-int pat_1095();
+int pat_1095();//map应用，排序
 int pat_1096();
 int pat_1097();
 int pat_1098();
