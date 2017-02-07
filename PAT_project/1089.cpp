@@ -11,7 +11,7 @@ int cmp_89(int a, int b) {
     return a < b;
 }
 
-int pat_89() {
+int pat_1089() {
     int n;
     cin >> n;
     int *a = new int [n];
