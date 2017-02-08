@@ -117,7 +117,7 @@ int pat_1103();//因式分解 ，dfs *
 int pat_1104();//数学问题
 int pat_1105();//模拟：螺旋矩阵
 int pat_1106();//树的遍历
-int pat_1107();
+int pat_1107();//并查集 **
 int pat_1108();
 int pat_1109();
 int pat_1110();
