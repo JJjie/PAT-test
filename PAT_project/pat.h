@@ -113,7 +113,7 @@ int pat_1099();//构建二叉搜素树
 int pat_1100();//散列
 int pat_1101();//快速排序
 int pat_1102();//树的遍历 层序 中序
-int pat_1103();
+int pat_1103();//因式分解 ，dfs *
 int pat_1104();
 int pat_1105();
 int pat_1106();

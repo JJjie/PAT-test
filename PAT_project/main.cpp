@@ -321,9 +321,9 @@ int main(int argc, const char * argv[]) {
     else if (tag == 102){
         pat_1102();
     }
-//    else if (tag == 103){
-//        pat_1103();
-//    }
+    else if (tag == 103){
+        pat_1103();
+    }
 //    else if (tag == 104){
 //        pat_1104();
 //    }
