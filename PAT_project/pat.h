@@ -125,7 +125,7 @@ int pat_1111();//dfs+dijkstra *
 int pat_1112();//STLmap的应用
 int pat_1113();//逻辑题
 int pat_1114();//并查集 **
-int pat_1115();
+int pat_1115();//二叉树的遍历 *
 int pat_1116();
 int pat_1117();
 int pat_1118();
