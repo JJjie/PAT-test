@@ -124,7 +124,7 @@ int pat_1110();//判断完全二叉树 *
 int pat_1111();//dfs+dijkstra *
 int pat_1112();//STLmap的应用
 int pat_1113();//逻辑题
-int pat_1114();
+int pat_1114();//并查集 **
 int pat_1115();
 int pat_1116();
 int pat_1117();
