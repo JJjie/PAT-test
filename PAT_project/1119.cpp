@@ -10,7 +10,7 @@ int *pre119, *post119;
 bool unique119 = true;
 vector<int> ans119;
 
-int findFromPre (int x, int l, int r) {
+int findFromPre (int x, int l, int r) {//可为根的左节点或右节点
     for (int i = l; i <= r; i++) {
         if (x == pre119[i]) {
             return i;

@@ -130,7 +130,7 @@ int pat_1116();//逻辑题
 int pat_1117();//逻辑题
 int pat_1118();//并查集 **
 int pat_1119();//前序后序转中序 *
-int pat_1120();
+int pat_1120();//set的应用
 int pat_1121();
 int pat_1122();
 int pat_1123();
