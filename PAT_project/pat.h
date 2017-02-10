@@ -128,8 +128,8 @@ int pat_1114();//并查集 **
 int pat_1115();//二叉树的遍历 *
 int pat_1116();//逻辑题
 int pat_1117();//逻辑题
-int pat_1118();
-int pat_1119();
+int pat_1118();//并查集 **
+int pat_1119();//前序后序转中序 *
 int pat_1120();
 int pat_1121();
 int pat_1122();
