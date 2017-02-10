@@ -127,7 +127,7 @@ int pat_1113();//逻辑题
 int pat_1114();//并查集 **
 int pat_1115();//二叉树的遍历 *
 int pat_1116();//逻辑题
-int pat_1117();
+int pat_1117();//逻辑题
 int pat_1118();
 int pat_1119();
 int pat_1120();
