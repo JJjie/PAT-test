@@ -133,6 +133,6 @@ int pat_1119();//前序后序转中序 *
 int pat_1120();//set的应用
 int pat_1121();//STL的应用
 int pat_1122();//哈密顿图
-int pat_1123();
+int pat_1123();//完全平衡二叉树
 
 #endif /* pat_h */
