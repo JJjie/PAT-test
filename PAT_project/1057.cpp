@@ -1,7 +1,6 @@
 //
 // Created by 胡文杰 on 2017/1/24.
 //
-
 #include "pat.h"
 #include <iostream>
 #include <stack>

@@ -45,12 +45,45 @@ int pat_1045(){
     }
     cout << lcs(m,l) << endl;
 
-//    for (int i = 0; i < m + 1; i++) {
-//        for (int j = 0; j < l + 1; j++) {
-//            printf("%d ",dp_45[i][j]);
-//        }
-//        printf("\n");
-//    }
+    for (int i = 0; i < m + 1; i++) {
+        for (int j = 0; j < l + 1; j++) {
+            printf("%d ",dp_45[i][j]);
+        }
+        printf("\n");
+    }
 
     return 0;
 }
+
+//// 采用lis的做法
+//int book[201], a[10001], dp[10001];
+//int main() {
+//    int n, m, x, l, num = 0, maxn = 0;
+//    scanf("%d %d", &n, &m);
+//    for(int i = 1; i <= m; i++) {
+//        scanf("%d", &x);
+//        book[x] = i;
+//    }
+//    scanf("%d", &l);
+//    for(int i = 0; i < l; i++) {
+//        scanf("%d", &x);
+//        if(book[x] >= 1)
+//            a[num++] = book[x];
+//    }
+//    for (int i = 0; i < l; ++i) {
+//        printf("%d ",a[i]);
+//    }
+//    printf("\n");
+//    for(int i = 0; i < num; i++) {
+//        dp[i] = 1;
+//        for(int j = 0; j < i; j++)
+//            if(a[i] >= a[j]) {
+//                dp[i] = max(dp[i], dp[j] + 1);
+//                printf("%d ",dp[i]);
+//            }
+//        printf("\n");
+//        maxn = max(dp[i], maxn);
+//    }
+//    printf("%d", maxn);
+//    return 0;
+//}
